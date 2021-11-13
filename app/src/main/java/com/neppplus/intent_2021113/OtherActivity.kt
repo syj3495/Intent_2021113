@@ -14,8 +14,11 @@ class OtherActivity : AppCompatActivity() {
 
 //            연습문제. 메인으로 돌아가게
 
-            val ReTurnIntent = Intent( this , MainActivity::class.java)
-            startActivity(ReTurnIntent)
+//            val ReTurnIntent = Intent( this , MainActivity::class.java)
+//            startActivity(ReTurnIntent)
+
+//            현재 화면 종료 -> 이전화면이 드러남
+            finish()
 
         }
 
