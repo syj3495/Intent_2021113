@@ -6,6 +6,11 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+//    멤버변수
+    val REQ_FOR_NICKNAME = 1000
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,7 +49,12 @@ class MainActivity : AppCompatActivity() {
 
         btnEditNickname.setOnClickListener {
 
-            val
+            val myintent = Intent(this, EditNicknameActivity::class.java)
+
+//            닉네임을 받기 위한 왕복이다. -> 왜 가는지를 구별해여ㅑ
+//            구별에 사용하는 숫자 -> Request_code라고 부름.
+
+            startActivityForResult(myintent, REQ_FOR_NICKNAME)
 
 
 
