@@ -17,6 +17,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnSms.setOnClickListener {
+
+            val inputPhoneNum = edtPhoneNum.text.toString()
+
+            val myUri = Uri.parse("smsto:${inputPhoneNum}")
+            val myIntent = Intent( Intent.ACTION_SENDTO, myUri )
+            myIntent.putExtra("sms_body", "이 문자는 자동입력입니다.")
+            startActivity(myIntent)
+
+
+
+        }
+
         btnCall.setOnClickListener {
 
 //            입력한 전화번호? 추출 ( 변수에 저장 )
