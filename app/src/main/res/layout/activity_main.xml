@@ -134,5 +134,11 @@
         android:layout_height="wrap_content"
         android:text="문자보내기 (Sendto)"/>
 
+    <Button
+        android:id="@+id/btnNaverWebLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네이버사이트 연결 (VIEW)"/>
+
 
 </LinearLayout>
